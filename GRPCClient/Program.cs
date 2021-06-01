@@ -28,6 +28,7 @@ namespace GRPCClient
 
                 Console.WriteLine("press enter to call the Gprc service...");
                 Console.ReadLine();
+                //Update the URL with your local or remote URL
                 var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions
                 {
                     HttpHandler = new GrpcWebHandler(new HttpClientHandler())
