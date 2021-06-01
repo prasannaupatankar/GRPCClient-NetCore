@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "GrpcClient";
+
+// The Company service definition.
+service Company {
+  // Sends a greeting
+  rpc PostCompanyWithEmployees (CompanyModel) returns (Response);
+}
+
+// The request message containing the companies's details with employees.
+message CompanyModel {
+  int32 companyId = 1;
+  string comapnyName = 2;
+  repeated EmployeeModel employees = 3;
+}
+
+// The request message containing the employee's details.
+message EmployeeModel {
+  int32 empId = 1;
+  string empName = 2;
+  int32 companyId = 3;
+  google.protobuf.Timestamp birthDate = 4;
+}
+
+// The response message containing the response status.
+message Response {
+  int32 status = 1;
+}
