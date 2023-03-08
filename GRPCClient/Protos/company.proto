@@ -6,7 +6,7 @@ option csharp_namespace = "GrpcClient";
 
 // The Company service definition.
 service Company {
-  // Sends a greeting
+  // Sends a comapny details
   rpc PostCompanyWithEmployees (CompanyModel) returns (Response);
 }
 
