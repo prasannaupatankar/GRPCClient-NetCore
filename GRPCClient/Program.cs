@@ -14,14 +14,14 @@ namespace GRPCClient
         {
             try
             {
-                await postComapny();
+                await addCompanyAndEmployee();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
-        public static async Task postComapny()
+        public static async Task addCompanyAndEmployee()
         {
             try
             {
